@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.views.covertCurrencyFragment.ConvertCurrencyFragment">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/base_currency_group"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginBottom="@dimen/_50dp"
+        app:constraint_referenced_ids="base_currency_edit_text,base_currency_text_view"
+        app:layout_constraintBottom_toTopOf="@id/horizontal_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/base_currency_edit_text"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:background="@android:color/transparent"
+        android:hint="@string/write_down_you_amount"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="@id/base_currency_group"
+        app:layout_constraintEnd_toStartOf="@id/base_currency_text_view"
+        app:layout_constraintStart_toStartOf="@id/base_currency_group"
+        app:layout_constraintTop_toTopOf="@id/base_currency_group" />
+
+    <TextView
+        android:id="@+id/base_currency_text_view"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_25dp"
+        android:text="@string/base_currency"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/base_currency_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/base_currency_edit_text"
+        app:layout_constraintTop_toTopOf="@id/base_currency_edit_text" />
+
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="@color/horizontal_line_light_gray"
+        app:layout_constraintBottom_toTopOf="@id/chosen_currency_group"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/base_currency_group" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/chosen_currency_group"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50dp"
+        android:layout_marginBottom="@dimen/_50dp"
+        app:constraint_referenced_ids="chosen_currency_edit_text,chosen_currency_text_view"
+        app:layout_constraintBottom_toTopOf="@id/blue_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontal_line" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/chosen_currency_edit_text"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_25dp"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:background="@android:color/transparent"
+        android:enabled="false"
+        android:hint="@string/_zer0_value"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        app:layout_constraintBottom_toBottomOf="@id/chosen_currency_group"
+        app:layout_constraintEnd_toStartOf="@id/chosen_currency_text_view"
+        app:layout_constraintStart_toStartOf="@id/chosen_currency_group"
+        app:layout_constraintTop_toTopOf="@id/chosen_currency_group" />
+
+    <TextView
+        android:id="@+id/chosen_currency_text_view"
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_25dp"
+        android:text="@string/base_currency"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@id/chosen_currency_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/chosen_currency_edit_text"
+        app:layout_constraintTop_toTopOf="@id/chosen_currency_edit_text" />
+
+    <View
+        android:id="@+id/blue_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="@color/horizontal_line_light_gray"
+        android:backgroundTint="@color/color_primary"
+        app:layout_constraintBottom_toTopOf="@id/keyboard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chosen_currency_group" />
+
+
+    <TableLayout
+        android:id="@+id/keyboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:divider="@drawable/shape_keyboard_divider"
+        android:orientation="vertical"
+        android:showDividers="beginning|middle|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/blue_view">
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_1"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_one" />
+
+            <TextView
+                android:id="@+id/t9_key_2"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_two" />
+
+            <TextView
+                android:id="@+id/t9_key_3"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_three" />
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_4"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_four" />
+
+            <TextView
+                android:id="@+id/t9_key_5"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_five" />
+
+            <TextView
+                android:id="@+id/t9_key_6"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_six" />
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_7"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_seven" />
+
+            <TextView
+                android:id="@+id/t9_key_8"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_eight" />
+
+            <TextView
+                android:id="@+id/t9_key_9"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_nine" />
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_clear"
+                style="@style/keyboard_button"
+                android:text="@string/button_clear"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/t9_key_0"
+                style="@style/keyboard_number_button"
+                android:text="@string/number_zero" />
+
+            <TextView
+                android:id="@+id/t9_key_backspace"
+                style="@style/keyboard_button"
+                android:text="@string/button_backspace"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+
+        <TableRow style="@style/keyboard_row">
+
+            <TextView
+                android:id="@+id/t9_key_convert"
+                style="@style/keyboard_button"
+                android:text="@string/button_convert"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

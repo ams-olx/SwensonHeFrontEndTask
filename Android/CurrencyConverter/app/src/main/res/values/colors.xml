@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#03A9F4</color>
+    <color name="color_accent">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#ff574c</color>
+    <color name="snackbar_green">#49D64F</color>
+    <color name="gray_background">#f2f2f2</color>
+    <color name="horizontal_line_light_gray">#b0b0b0</color>
+</resources>

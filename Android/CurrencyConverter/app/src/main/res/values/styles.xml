@@ -1,0 +1,48 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">#0000FF</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="buttonStyle">@style/LightBlueButtonStyle</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/color_primary</item>
+    </style>
+
+    <style name="LargeTextViewStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">@dimen/_17sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="MediumTextViewStyle" parent="LargeTextViewStyle">
+        <item name="android:textSize">@dimen/_13sp</item>
+    </style>
+
+    <style name="LightBlueButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="keyboard_row">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:divider">@drawable/shape_keyboard_divider</item>
+        <item name="android:gravity">center</item>
+        <item name="android:showDividers">beginning|middle|end</item>
+    </style>
+
+    <style name="keyboard_button">
+        <item name="android:layout_width">@dimen/_0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/_12dp</item>
+        <item name="android:paddingBottom">@dimen/_12dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:scaleType">centerInside</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="keyboard_number_button" parent="keyboard_button">
+        <item name="android:tag">number_button</item>
+    </style>
+</resources>
