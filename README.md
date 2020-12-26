@@ -37,7 +37,7 @@ you’d like. You don’t need to write any code for this question.
 
 6. I also used [Resolver](https://github.com/hmlongco/Resolver) as a dependency injection framework, I'm also contributing to this open-source library.
 
-7. In iOS I used the Navigator to handle the navigation between view controllers, Navigator is the Router layer in VIPER pattern which os responsible for the navigation from one view to another.
+7. In iOS I used the Navigator to handle the navigation between view controllers, Navigator is the Router layer in VIPER pattern which is responsible for the navigation from one view to another.
 
 8. Along with the suggested fixer.io API, I used this [API](https://restcountries.eu/) to fetch the world countries to match the suggested design as match as I can, I combined the results from the two APIs to get a new list that has both the flag and currency info.
 
